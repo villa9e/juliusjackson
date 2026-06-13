@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Julius D. Jackson — Director of Application Development &amp; Platform Implementation</title>
+<meta name="description" content="Julius D. Jackson — application development and platform-implementation leader. 18 years shipping LMS platforms, automation, and CRM/ERP systems. Salesforce-certified. Author of 'Is That Fair?' and 'The Love Life.'" />
+<meta property="og:title" content="Julius D. Jackson — Director of Application Development" />
+<meta property="og:description" content="18 years turning strategy into shipped software, automation, and platforms." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0E1A2B;          /* deep navy bg */
+    --ink-2:#13243B;        /* raised navy */
+    --ink-3:#1B3149;        /* hairline navy */
+    --paper:#F6F8FB;        /* light section bg */
+    --card:#FFFFFF;
+    --gold:#E3B23C;         /* primary accent (from book cover) */
+    --gold-soft:#F2D58A;
+    --teal:#2A8089;         /* secondary accent */
+    --text:#16202E;         /* body text on light */
+    --muted:#5C6B7A;        /* muted text on light */
+    --muted-d:#9DB0C4;      /* muted text on dark */
+    --line:#E2E8F0;         /* light hairline */
+    --maxw:1140px;
+    --r:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--text);
+    font-family:"Inter",system-ui,sans-serif;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-0.02em;margin:0;}
+  .mono{font-family:"JetBrains Mono",monospace;}
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--gold);margin:0 0 14px;font-weight:500;
+  }
+  .eyebrow.dark{color:var(--teal);}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;background:rgba(14,26,43,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;
+    height:64px;max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .brand{font-family:"Space Grotesk";font-weight:700;color:#fff;font-size:1.06rem;letter-spacing:-.01em;text-decoration:none;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{color:var(--muted-d);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s;}
+  .nav-links a:hover{color:#fff;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;
+    text-decoration:none;border-radius:999px;padding:10px 20px;transition:transform .15s,box-shadow .2s,background .2s;cursor:pointer;border:none;
+  }
+  .btn-gold{background:var(--gold);color:#1a1305;}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(227,178,60,.6);}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+  .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;}
+  .hero::before{ /* blueprint glow */
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(620px 420px at 78% 30%,rgba(42,128,137,.28),transparent 70%),
+      radial-gradient(520px 360px at 12% 90%,rgba(227,178,60,.10),transparent 70%);
+    pointer-events:none;
+  }
+  .hero::after{ /* grid */
+    content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(circle at 70% 40%,#000,transparent 75%);
+            mask-image:radial-gradient(circle at 70% 40%,#000,transparent 75%);
+  }
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;
+    max-width:var(--maxw);margin:0 auto;padding:84px 28px 78px;}
+  .hero h1{font-size:clamp(2.6rem,5.4vw,4rem);font-weight:700;color:#fff;}
+  .hero h1 .ln2{color:var(--gold);}
+  .hero .role{font-size:1.18rem;color:#D8E2EE;margin:20px 0 8px;font-weight:500;font-family:"Space Grotesk";}
+  .hero .lede{color:var(--muted-d);max-width:46ch;font-size:1.02rem;margin:14px 0 28px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .stats{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap;}
+  .stat .n{font-family:"Space Grotesk";font-weight:700;font-size:1.7rem;color:#fff;line-height:1;}
+  .stat .l{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d);margin-top:7px;}
+
+  .portrait-wrap{justify-self:center;position:relative;}
+  .portrait{
+    width:300px;height:300px;border-radius:50%;object-fit:cover;object-position:center top;
+    border:3px solid rgba(227,178,60,.55);box-shadow:0 30px 70px -22px rgba(0,0,0,.7);
+    background:#0b1624;
+  }
+  .portrait-ring{
+    position:absolute;inset:-18px;border-radius:50%;border:1px dashed rgba(227,178,60,.35);
+    animation:spin 40s linear infinite;
+  }
+  .portrait-badge{
+    position:absolute;bottom:8px;left:-8px;background:var(--gold);color:#1a1305;
+    font-family:"JetBrains Mono",monospace;font-size:.66rem;font-weight:500;letter-spacing:.08em;
+    padding:7px 12px;border-radius:999px;box-shadow:0 8px 20px -8px rgba(0,0,0,.6);
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee-sec{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:30px 0;}
+  .marquee-label{text-align:center;font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--muted-d);margin-bottom:22px;}
+  .marquee{position:relative;display:flex;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .marquee-track{display:flex;gap:14px;padding-right:14px;flex-shrink:0;animation:scroll 46s linear infinite;}
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  .chip{
+    flex-shrink:0;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);
+    color:#E7EEF6;font-family:"Space Grotesk";font-weight:600;font-size:.92rem;
+    padding:11px 18px;border-radius:10px;transition:border-color .2s,color .2s,background .2s;
+  }
+  .chip:hover{border-color:var(--gold);color:var(--gold);background:rgba(227,178,60,.06);}
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:.7;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:84px 0;}
+  .sec-head{max-width:620px;margin-bottom:46px;}
+  .sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:700;}
+  .sec-head p{color:var(--muted);margin:14px 0 0;font-size:1.04rem;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:300px 1fr;gap:54px;align-items:start;}
+  .about-photo{width:260px;height:260px;border-radius:50%;object-fit:cover;object-position:center 25%;
+    border:3px solid #fff;box-shadow:0 24px 50px -20px rgba(14,26,43,.4);margin:0 auto;}
+  .about-photo-card{position:relative;}
+  .about-photo-card .tag{position:absolute;right:6px;bottom:6px;background:var(--ink);color:var(--gold);
+    font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.08em;padding:6px 11px;border-radius:999px;}
+  .about-body p{margin:0 0 16px;color:#33414f;font-size:1.05rem;}
+  .about-body p strong{color:var(--ink);font-weight:600;}
+  .chip-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;}
+  .skill-pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 15px;
+    font-size:.85rem;font-weight:500;color:#33414f;font-family:"JetBrains Mono",monospace;}
+  .skill-pill.gold{background:var(--ink);color:var(--gold-soft);border-color:var(--ink);}
+
+  /* ---------- TIMELINE ---------- */
+  .tl{position:relative;margin-top:10px;}
+  .tl::before{content:"";position:absolute;left:13px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--line));}
+  .tl-item{position:relative;padding:0 0 36px 50px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-node{position:absolute;left:6px;top:5px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--gold);}
+  .tl-item.tech .tl-node{background:var(--gold);}
+  .tl-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:transform .2s,box-shadow .2s,border-color .2s;}
+  .tl-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(14,26,43,.45);border-color:#cdd8e6;}
+  .tl-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .tl-role{font-family:"Space Grotesk";font-weight:700;font-size:1.18rem;color:var(--ink);}
+  .tl-date{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--teal);white-space:nowrap;font-weight:500;}
+  .tl-co{color:var(--muted);font-weight:500;margin:2px 0 10px;font-size:.95rem;}
+  .tl-co b{color:#33414f;font-weight:600;}
+  .tl-desc{color:#41505f;font-size:.98rem;margin:0;}
+  .tl-tag{display:inline-block;margin-top:12px;background:rgba(42,128,137,.10);color:var(--teal);
+    font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.06em;padding:4px 10px;border-radius:6px;}
+
+  /* ---------- CAPABILITIES ---------- */
+  .cap-sec{background:#fff;}
+  .cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .cap-card{border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--paper);}
+  .cap-card h3{font-size:1.05rem;color:var(--ink);display:flex;align-items:center;gap:10px;font-weight:600;}
+  .cap-card h3 .k{font-family:"JetBrains Mono",monospace;color:var(--gold);font-size:.85rem;}
+  .cap-list{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px;}
+  .cap-list li{font-size:.84rem;color:#41505f;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 11px;}
+
+  /* ---------- BOOKS ---------- */
+  .books-sec{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
+  .books-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 85% 15%,rgba(42,128,137,.22),transparent 70%);pointer-events:none;}
+  .books-sec .sec-head h2{color:#fff;}
+  .books-sec .sec-head p{color:var(--muted-d);}
+  .books-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(2,1fr);gap:34px;}
+  .book{display:flex;gap:24px;align-items:flex-start;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:26px;}
+  .book img{width:140px;flex-shrink:0;border-radius:8px;box-shadow:0 20px 44px -16px rgba(0,0,0,.7);}
+  .book h3{font-size:1.22rem;color:#fff;}
+  .book .by{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--gold);letter-spacing:.06em;margin:8px 0 12px;}
+  .book p{color:var(--muted-d);font-size:.94rem;margin:0;}
+  .book .fwd{display:inline-block;margin-top:14px;background:rgba(227,178,60,.14);color:var(--gold-soft);
+    border:1px solid rgba(227,178,60,.3);font-size:.74rem;padding:5px 12px;border-radius:999px;font-family:"JetBrains Mono",monospace;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink-2);color:#fff;text-align:center;}
+  .contact h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:10px;}
+  .contact p{color:var(--muted-d);max-width:50ch;margin:0 auto 30px;}
+  .contact-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .contact-meta{margin-top:40px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;
+    font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--muted-d);}
+  .contact-meta a{color:var(--muted-d);text-decoration:none;}
+  .contact-meta a:hover{color:var(--gold);}
+
+  footer.foot{background:var(--ink);color:var(--muted-d);text-align:center;padding:30px 0;font-size:.82rem;border-top:1px solid rgba(255,255,255,.06);}
+  footer.foot span{color:var(--gold);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:880px){
+    .hero-inner{grid-template-columns:1fr;gap:40px;text-align:center;padding:64px 28px 60px;}
+    .hero .lede{margin-left:auto;margin-right:auto;}
+    .hero-cta,.stats{justify-content:center;}
+    .portrait{width:240px;height:240px;}
+    .about-grid{grid-template-columns:1fr;gap:34px;}
+    .cap-grid,.books-grid{grid-template-columns:1fr;}
+    .book{flex-direction:column;align-items:center;text-align:center;}
+    .nav-links{position:fixed;inset:64px 0 auto 0;background:var(--ink);flex-direction:column;gap:0;
+      padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:14px 28px;width:100%;}
+    .nav-links .btn{margin:10px 28px;text-align:center;justify-content:center;}
+    .nav-toggle{display:block;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto!important;}
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">Julius D. <span>Jackson</span></a>
+    <button class="nav-toggle" aria-label="Menu" id="navToggle">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#books">Books</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-gold" href="assets/Julius_Jackson_Resume.docx" download>Download Résumé</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">Director · Application Development · Platform Implementation</p>
+      <h1>Julius D.<br /><span class="ln2">Jackson</span></h1>
+      <p class="role">I turn strategy into shipped software.</p>
+      <p class="lede">Eighteen years building LMS platforms, automation, and CRM/ERP systems end to end — from requirements and GitHub-based delivery through UAT, deployment, and adoption. Salesforce-certified, AI-fluent, results-obsessed.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="assets/Julius_Jackson_Resume.docx" download>Download Résumé</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">18 yrs</div><div class="l">Building &amp; shipping</div></div>
+        <div class="stat"><div class="n">Salesforce</div><div class="l">Certified Admin</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">Published books</div></div>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="portrait-ring" aria-hidden="true"></div>
+      <img class="portrait" src="assets/headshot-suit.png" alt="Julius D. Jackson" />
+      <div class="portrait-badge mono">// building since 2008</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-sec">
+  <div class="marquee-label">Experience across teams, platforms &amp; events</div>
+  <div class="marquee">
+    <div class="marquee-track" id="track"></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div class="about-photo-card">
+        <img class="about-photo" src="assets/headshot-hat.png" alt="Julius D. Jackson" />
+        <span class="tag mono">hello</span>
+      </div>
+      <div class="about-body">
+        <p class="eyebrow">About</p>
+        <p><strong>I build the systems organizations run on.</strong> Across technology, financial services, real estate, and mission-driven work, my job has stayed the same: take a messy, manual reality and turn it into clean, scalable software that people actually adopt.</p>
+        <p>I've led the full lifecycle of a multi-layer LMS and operations platform — gathering requirements, organizing delivery in GitHub, running UAT, validating deployments, and supporting users after launch. I wire together <strong>Salesforce, Power Automate, Google Cloud, Make.com</strong>, and modern AI tooling to retire manual work, and I translate executive vision into specs, SOPs, and implementation plans the whole team can move on.</p>
+        <p>I'm also a founder, a published author, and a community builder — which is just to say I care about the humans on the other side of every system I ship.</p>
+        <div class="chip-row">
+          <span class="skill-pill gold">Salesforce Certified Admin</span>
+          <span class="skill-pill">Facebook Blueprint</span>
+          <span class="skill-pill">Insurance Licensed</span>
+          <span class="skill-pill">Real Estate Licensed</span>
+          <span class="skill-pill">HCE Certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Experience</p>
+      <h2>Eighteen years, one throughline: ship what matters.</h2>
+      <p>A continuous arc from accounting and operations into application development and platform leadership.</p>
+    </div>
+    <div class="tl" id="timeline"></div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities" class="cap-sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Capabilities</p>
+      <h2>What I bring to a delivery team.</h2>
+    </div>
+    <div class="cap-grid reveal" id="capGrid"></div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books" class="books-sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow dark">Published work</p>
+      <h2>I write, too.</h2>
+      <p>Two books on the human side of leadership, dialogue, and connection.</p>
+    </div>
+    <div class="books-grid reveal">
+      <div class="book">
+        <img src="assets/book-is-that-fair.png" alt="Is That Fair? book cover" />
+        <div>
+          <h3>Is That Fair?</h3>
+          <div class="by mono">A Practical Guide for Transformative Dialogue</div>
+          <p>A field guide to the conversations that change relationships, teams, and communities — turning conflict into understanding through fair, structured dialogue.</p>
+          <span class="fwd">★ Foreword by Harvard professor Dr. Shawn Ginwright</span>
+        </div>
+      </div>
+      <div class="book">
+        <img src="assets/book-love-life.png" alt="The Love Life book cover" />
+        <div>
+          <h3>The Love Life</h3>
+          <div class="by mono">The Secret Science of Love and How to Master It</div>
+          <p>An accessible look at the patterns and principles behind lasting connection — written for anyone who wants to love more intentionally.</p>
+          <span class="fwd">By Julius “LJ Bey” Jackson</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something.</h2>
+      <p>Open to Director / Lead roles in application development, platform implementation, and software delivery.</p>
+      <div class="contact-cta">
+        <a class="btn btn-gold" href="mailto:JuliusDJackson@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="assets/Julius_Jackson_Resume.docx" download>Download résumé</a>
+      </div>
+      <div class="contact-meta">
+        <a href="mailto:JuliusDJackson@gmail.com">JuliusDJackson@gmail.com</a>
+        <span>(707) 816-0640</span>
+        <a href="https://linkedin.com/in/juliusdeshonjackson" target="_blank" rel="noopener">linkedin.com/in/juliusdeshonjackson</a>
+        <span>Sacramento / Bay Area · Remote</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">© <span id="yr"></span> Julius D. Jackson · <span>juliusjackson.com</span></div>
+</footer>
+
+<script>
+  // ---- Logo marquee (wordmark chips) ----
+  const companies = [
+    "Google","Google I/O","Google Cloud Next","Facebook","PayPal","Salesforce","Dreamforce",
+    "Global Investment Company","Glory Boutique","Life House Reentry","CapFund Academy",
+    "Transwestern","AT&T","SurveyMonkey / Momentive","Flourish Agenda","Maker Media / Maker Faire",
+    "Sacramento County","OZI Company","Plaid","Singularity University"
+  ];
+  const track = document.getElementById("track");
+  const makeChip = (name) => {
+    const d = document.createElement("span");
+    d.className = "chip";
+    d.innerHTML = '<span class="dot"></span>' + name;
+    return d;
+  };
+  // duplicate the set so the -50% scroll loops seamlessly
+  [...companies, ...companies].forEach(c => track.appendChild(makeChip(c)));
+
+  // ---- Timeline ----
+  const roles = [
+    {role:"Founder & Executive Program Director", co:"Life House Reentry", loc:"Sacramento, CA", date:"2023 — Present", tech:true,
+      desc:"Founded a reentry housing and community-support organization and built its internal applications, client-tracking systems, intake workflows, and documentation infrastructure from the ground up. Lead strategy and budgeting; grew community participation 30%.", tag:"Current · App build · Systems design"},
+    {role:"Director, Application Development & Platform Implementation", co:"Global Investment Company", loc:"Oakland, CA / Remote", date:"2020 — 2023", tech:true,
+      desc:"Led buildout of a multi-layer LMS and digital operations platform — directing the full SDLC, GitHub delivery, UAT, and deployment — and built an AI-embedded financial-literacy app adopted by 1,200+ users while lifting engagement 30%.", tag:"LMS · SDLC · AI app"},
+    {role:"Business Systems Engineer II & Salesforce Administrator", co:"Momentive.ai / SurveyMonkey", loc:"San Mateo, CA", date:"2018 — 2020", tech:true,
+      desc:"Administered and integrated the go-to-market stack — Salesforce, HubSpot, Gong, Zoom, DocuSign — supporting a $500M sales funnel. Cut support tickets 30%, improved data accuracy 15%, and accelerated the deal cycle 10% (12% YoY revenue growth) with SOX/GDPR-compliant governance.", tag:"Salesforce · CRM ops · Automation"},
+    {role:"Senior Trainer, Healing-Centered Engagement", co:"Flourish Agenda", loc:"Oakland, CA / Remote", date:"2016 — 2018", tech:false,
+      desc:"Spearheaded a Healing-Centered Engagement rollout across 15 school districts and 5 hospital systems — cutting incident reports 20% and lifting staff retention 25% — across 100+ seminars and keynotes.", tag:"Rollout · Change mgmt"},
+    {role:"Operations Manager, Financial Services", co:"OZI Company", loc:"Oakland, CA", date:"2014 — 2016", tech:true,
+      desc:"Ran operations for America's first women-owned, FinTech-driven Opportunity Zone fund. Built an integrated CRM–ERP process that accelerated fund deployment 35% with 100% audit readiness and expanded housing placements 40%.", tag:"CRM–ERP integration"},
+    {role:"Tenant Coordinator, Commercial Real Estate", co:"Transwestern", loc:"San Francisco, CA", date:"2011 — 2014", tech:false,
+      desc:"Digitized AP/AR workflows across six commercial high-rises — cutting processing time 40% and errors 25% and saving ~$250K annually — and supported a $30M seismic retrofit using Yardi, CTI, and Voyager.", tag:"Workflow digitization"},
+    {role:"Jr. Accountant, Media Services", co:"Maker Media (Maker Faire)", loc:"San Francisco, CA", date:"2008 — 2011", tech:false,
+      desc:"Ran AR operations and mastered a mid-level ERP cloud accounting system while training extensively on Salesforce; processed monthly reporting for the Controller and CFO and cut close time 20%.", tag:"ERP · Salesforce"}
+  ];
+  const tl = document.getElementById("timeline");
+  roles.forEach(r => {
+    const item = document.createElement("div");
+    item.className = "tl-item" + (r.tech ? " tech" : "");
+    item.innerHTML = `
+      <div class="tl-node"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <div class="tl-role">${r.role}</div>
+          <div class="tl-date mono">${r.date}</div>
+        </div>
+        <div class="tl-co"><b>${r.co}</b> · ${r.loc}</div>
+        <p class="tl-desc">${r.desc}</p>
+        <span class="tl-tag mono">${r.tag}</span>
+      </div>`;
+    tl.appendChild(item);
+  });
+
+  // ---- Capabilities ----
+  const caps = [
+    {k:"01", t:"Platforms & Development", items:["GitHub / Git","LMS Buildout","Salesforce Admin","HubSpot","ERP/CRM Implementation","UAT","Deployment & Launch","Reports & Dashboards"]},
+    {k:"02", t:"Automation & AI", items:["Power Automate","Make.com","Google Cloud","Google Ads Script","Claude AI","ChatGPT","AI Agents","Workflow Automation"]},
+    {k:"03", t:"Delivery & Methods", items:["SDLC","Agile & Waterfall","Requirements Gathering","Business Systems Analysis","Technical Docs","SOP Development","Process Mapping"]},
+    {k:"04", t:"GTM & Tools", items:["Gong","Outreach.io","Malbek","DocuSign","Microsoft 365","Google Workspace","Yardi","SOX / GDPR"]}
+  ];
+  const cg = document.getElementById("capGrid");
+  caps.forEach(c => {
+    const el = document.createElement("div");
+    el.className = "cap-card";
+    el.innerHTML = `<h3><span class="k mono">${c.k}</span> ${c.t}</h3>
+      <ul class="cap-list">${c.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
+    cg.appendChild(el);
+  });
+
+  // ---- Year ----
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // ---- Mobile nav ----
+  const tgl = document.getElementById("navToggle"), links = document.getElementById("navLinks");
+  tgl.addEventListener("click", () => links.classList.toggle("open"));
+  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+
+  // ---- Reveal on scroll ----
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
+  }, {threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
